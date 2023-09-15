@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models\MasterData;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class ConfigPayment extends Model
+{
+    // use HasFactory;
+    use SoftDeletes;
+
+    // declare table
+    public $table = 'config_payment';
+
+    // this field must type date y-m-d h:m:s
+    protected $dates = [
+        'crated_at',
+        'updated_at',
+        'deleted_at'
+    ];
+
+    // declare fillable
+    protected $fillable = [
+        'fee',
+        'vat',
+        'crated_at',
+        'updated_at',
+        'deleted_at'
+    ];
+}
